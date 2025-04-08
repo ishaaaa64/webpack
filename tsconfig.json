@@ -8,7 +8,8 @@
     "noEmit": true,
     "strict": true,
     "types": ["node"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "rootDir": "." // ✅ Ensures all included files are under rootDir
   },
   "include": [
     "declarations.d.ts",
@@ -18,5 +19,9 @@
     "lib/**/*.js",
     "tooling/**/*.js",
     "setup/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.ts"
   ]
 }
